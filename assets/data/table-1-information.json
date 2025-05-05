@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "description": "Ardor de ojos"
+  },
+  {
+    "id": 2,
+    "description": "Hiperemia"
+  },
+  {
+    "id": 3,
+    "description": "Dolores de cabeza"
+  },
+  {
+    "id": 4,
+    "description": "Lagrimeo"
+  },
+  {
+    "id": 5,
+    "description": "Visión borrosa de lejos"
+  },
+  {
+    "id": 6,
+    "description": "Visión borrosa de cerca"
+  },
+  {
+    "id": 7,
+    "description": "Fotofobia"
+  }
+]
