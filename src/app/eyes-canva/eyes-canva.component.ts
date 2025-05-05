@@ -79,6 +79,7 @@ export class EyesCanvaComponent {
   public clearPad(): void {
     this.signaturePad.clear();
     this.loadBackgroundImg();
+    this.signaturePad.on();
   }
 
   public saveSignaturePNG(): void {
@@ -88,5 +89,9 @@ export class EyesCanvaComponent {
     a.download = 'signature.png'
     a.click();
   }
+
+  public disabledPad(): void {
+    this.signaturePad.off();
+  };
 
 }

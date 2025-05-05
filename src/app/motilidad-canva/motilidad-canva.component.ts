@@ -24,7 +24,8 @@ export class MotilidadCanvaComponent {
     return {
       base64: imgTemplate,
       width: 300,
-      height: 100
+      height: 150,
+      yOffset: 0
     }
 
 
