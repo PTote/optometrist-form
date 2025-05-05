@@ -32,7 +32,7 @@ export class AppComponent {
   title = 'optometrist-form';
 
   table1Information = table1Information;
-  nextPage = 6;
+  nextPage = 0;
   backPage = 0;
   farAndCloseComponents = farAndCloseTable()
   farAndCloseTablesArr = ['lejos', 'cerca'];
