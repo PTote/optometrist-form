@@ -1,0 +1,320 @@
+@media only screen and (max-width: 650px) {
+  .main-container {
+    padding: 20px;
+    background-color: aqua;
+  }
+
+  .title-container {
+    margin-bottom: 30px;
+  }
+
+  .hide-container {
+    display: none;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .group-1-container .group-1-container__fields {
+    margin: 20px 0 20px 0;
+    text-align: center;
+  }
+
+  .group-1-container
+    .group-1-container__fields
+    .group-1-container__fields-input {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .group-2-container .issues-information-container {
+    margin: 20px 0 0 0;
+  }
+
+  .group-2-container .issues-information-container #main-problem-input {
+    width: 100%;
+  }
+
+  .group-3-container .history-pacient-container {
+    margin: 20px 0 0 0;
+  }
+
+  .group-3-container .history-pacient-container .history-pacient-input {
+    width: 100%;
+  }
+
+  .group-4-container .av-container {
+    margin: 20px 0 0 0;
+  }
+
+  .group-4-container .av-container .av-name-field {
+    display: block;
+  }
+
+  .group-5-container .convergencia-container {
+    margin: 20px 0 40px 0;
+  }
+
+  .group-5-container .convergencia-container .convergencia-field {
+    margin-top: 20px;
+
+    input {
+      margin-left: 30px;
+    }
+  }
+
+  .group-6-container .tests-container {
+    display: grid;
+    row-gap: 50px;
+    margin-bottom: 40px;
+  }
+
+  .group-7-container .far-and-close-tables-container {
+    outline: 1px red solid;
+
+  }
+
+  .far-close-table-container-desk{
+    display: none;
+  }
+
+
+
+  .group-8-container .type-control-container .type-control-field {
+    width: 100%;
+  }
+
+  .buttons-container {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 1024px) {
+  .main-container {
+    padding: 20px;
+    background-color: brown;
+  }
+
+  .title-container {
+    margin-bottom: 30px;
+  }
+
+  .hide-container {
+    display: none;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .group-1-container .group-1-container__fields {
+    margin: 20px 0 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  .group-1-container
+    .group-1-container__fields
+    .group-1-container__fields-input {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .group-2-container .issues-information-container {
+    margin: 20px 0 0 0;
+  }
+
+  .group-2-container .issues-information-container #main-problem-input {
+    width: 100%;
+  }
+
+  .group-3-container .history-pacient-container {
+    margin: 20px 0 0 0;
+  }
+
+  .group-3-container .history-pacient-container .history-pacient-input {
+    width: 100%;
+  }
+
+  .group-4-container .av-container {
+    margin: 20px 0 0 0;
+  }
+
+  .group-4-container .av-container .av-name-field {
+    display: block;
+  }
+
+  .group-4-container .av-container .av-inputs-container {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: minmax(0, 200px) minmax(0, 200px) minmax(0, 200px);
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .group-5-container .convergencia-container {
+    margin: 40px 0 40px 0;
+  }
+
+  .group-5-container .convergencia-container .convergencia-field {
+    margin-top: 20px;
+    text-align: center;
+
+    input {
+      margin-left: 30px;
+    }
+  }
+
+  .group-6-container .tests-container {
+    display: grid;
+    row-gap: 50px;
+    margin-bottom: 40px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .group-7-container .far-close-tables-container {
+    margin-bottom: 40px;
+  }
+
+  .far-close-table-container-desk{
+    display: none;
+  }
+
+  .group-7-container .far-close-tables-container .table-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .group-8-container .type-control-container .type-control-field {
+    width: 100%;
+  }
+
+  .buttons-container {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .main-container {
+    width: 100%;
+    max-width: 1500px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .main-container__body {
+    outline: 1px red solid;
+    display: grid;
+    justify-self: center;
+    row-gap: 30px;
+  }
+
+  .group-1-container__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  .group-1-container__fields-input {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .issues-information-container {
+    width: 100%;
+    max-width: 900px;
+    justify-self: center;
+
+    #main-problem-input {
+      width: 100%;
+    }
+  }
+
+  .history-pacient-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+  }
+
+  .av-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .av-inputs-container {
+    display: grid;
+    grid-template-columns: minmax(120px, 150px) minmax(120px, 150px) minmax(
+        120px,
+        150px
+      );
+    column-gap: 10px;
+  }
+
+  .motilidad-convergencia-container {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+
+  .convergencia-container {
+    display: grid;
+    justify-content: center;
+  }
+
+  .tests-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .type-control-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .distanc-pupilar-class {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+
+  .type-glass-class {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+  }
+
+  .type-filter-class {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+  }
+
+  .observations-class {
+    grid-row: 5 / 4;
+    grid-column: 1 / 3;
+  }
+
+
+  .far-close-table-container{
+    display: none;
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "code": "sc-L",
+    "name": "AV sc (L)",
+    "values": ["OD", "OI", "AO"]
+  },
+  {
+    "code": "sc-C",
+    "name": "AV sc (C)",
+    "values": ["OD", "OI", "AO"]
+  },
+  {
+    "code": "cc-L",
+    "name": "AV cc (L)",
+    "values": ["OD", "OI", "AO"]
+  },
+  {
+    "code": "cc-C",
+    "name": "AV cc (C)",
+    "values": ["OD", "OI", "AO"]
+  },
+  {
+    "code": "pin-sc-L",
+    "name": "Pin Hole sc (L)",
+    "values": ["OD", "OI"]
+  },
+  {
+    "code": "pin-cc-L",
+    "name": "Pin Hole cc (L)",
+    "values": ["OD", "OI"]
+  }
+]

@@ -1,0 +1,21 @@
+<div class="eyes-canva-container">
+
+  <h1 *ngIf="canvasTitle">
+    {{canvasTitle | uppercase}}
+  </h1>
+
+  <div class="wrapper">
+    <canvas
+      #canvas
+      [id]="canvasClassAndId"
+      [class]="canvasClassAndId"
+    ></canvas>
+  </div>
+
+  <div class="buttons-container">
+    <button (click)="clearPad()">Limpiar</button>
+    <button (click)="saveSignaturePNG()">Descargar</button>
+  </div>
+</div>
+
+

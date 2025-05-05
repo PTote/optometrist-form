@@ -1,0 +1,9 @@
+@media (min-width: 651px){
+
+  .motilidad-container{
+    display: grid;
+    grid-template-columns: minmax(0,382px) minmax(0,382px);
+    justify-content: center;
+  }
+
+}
