@@ -62,37 +62,36 @@
     <section
       [ngClass]="nextPage === 2 ? 'group-3-container' : 'hide-container'"
     >
-    <span>Historial del paciente</span>
+      <span>Historial del paciente</span>
 
-    <div class="history-pacient-container">
-      <mat-form-field class="history-pacient-input">
-        <mat-label>Historia ocular</mat-label>
-        <textarea matInput></textarea>
-      </mat-form-field>
-      <mat-form-field class="history-pacient-input">
-        <mat-label>Historia medica</mat-label>
-        <textarea matInput></textarea>
-      </mat-form-field>
-      <mat-form-field class="history-pacient-input">
-        <mat-label>Medicamentos</mat-label>
-        <textarea matInput></textarea>
-      </mat-form-field>
-    </div>
-
+      <div class="history-pacient-container">
+        <mat-form-field class="history-pacient-input">
+          <mat-label>Historia ocular</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
+        <mat-form-field class="history-pacient-input">
+          <mat-label>Historia medica</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
+        <mat-form-field class="history-pacient-input">
+          <mat-label>Medicamentos</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
+      </div>
     </section>
 
     <section
       aria-labelledby="av-section"
       [ngClass]="nextPage === 3 ? 'group-4-container' : 'hide-container'"
     >
-      <span>{{'agudeza visual' | uppercase}}</span>
+      <span>{{ "agudeza visual" | uppercase }}</span>
       <div class="av-container">
         <div *ngFor="let item of avArr">
           <span class="av-name-field">{{ item.name }}</span>
           <div class="av-inputs-container">
-            <mat-form-field *ngFor="let values of item.values">
+            <mat-form-field *ngFor="let values of item.values" class="av-input">
               <mat-label>{{ values }}</mat-label>
-              <input matInput #message maxlength="256" class="av-input" />
+              <input matInput #message maxlength="256" />
             </mat-form-field>
           </div>
         </div>
@@ -103,149 +102,104 @@
       aria-labelledby="motilidad-section"
       [ngClass]="nextPage === 4 ? 'group-5-container' : 'hide-container'"
     >
-
       <div class="motilidad-convergencia-container">
-
         <div class="motilidad-container">
-      <span>MOTILIDAD</span>
+          <span>MOTILIDAD</span>
 
           <app-motilidad-canva></app-motilidad-canva>
+        </div>
 
+        <div class="convergencia-container">
+          <span class="convergencia-title">CONVERGENCIA</span>
+
+          <div class="convergencia-field">
+            <span>Ppc:</span>
+            <input type="text" />
+            <span>cm</span>
           </div>
-
-          <div class="convergencia-container">
-            <span class="convergencia-title">CONVERGENCIA</span>
-
-            <div class="convergencia-field">
-              <span>Ppc:</span>
-              <input type="text" />
-              <span>cm</span>
-            </div>
-
-          </div>
+        </div>
       </div>
-
     </section>
 
     <section
       aria-labelledby="tests-section"
       [ngClass]="nextPage === 5 ? 'group-6-container' : 'hide-container'"
     >
-
-    <div class="tests-container">
-      <app-tester-hirschberg></app-tester-hirschberg>
-      <app-cover-test></app-cover-test>
-      <app-back-eye-test></app-back-eye-test>
-    </div>
-
+      <div class="tests-container">
+        <app-tester-hirschberg></app-tester-hirschberg>
+        <app-cover-test></app-cover-test>
+        <app-back-eye-test></app-back-eye-test>
+      </div>
     </section>
 
     <section
       aria-labelledby="far-close-tables"
       [ngClass]="nextPage === 6 ? 'group-7-container' : 'hide-container'"
     >
-
-    <div class="far-and-close-tables-container">
-
-      <div class="far-close-table-container" *ngFor="let nameTable of farAndCloseTablesArr">
-        <span>{{nameTable}}</span>
-        <table
-        class="table table-striped"
-        *ngFor="let item of farAndCloseComponents"
+      <div class="far-and-close-tables-container">
+        <div
+          class="table-container"
+          *ngFor="let nameTable of farAndCloseTablesArr"
         >
-          <thead>
-            <tr>
-              <th scope="col">Ojo</th>
-              <th scope="col">{{item}}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="col">Derecho</th>
-              <th scope="col">
-                <input type="text">
-              </th>
-            </tr>
-            <tr>
-              <th scope="col">Izquierdo</th>
-              <th scope="col">
-                <input type="text">
-              </th>
-            </tr>
-          </tbody>
-        </table>
+          <span class="subtitles-font">{{ nameTable | uppercase }}</span>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Ojo</th>
+                <th scope="col" *ngFor="let item of farAndCloseComponents">
+                  {{ item }}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="col">Derecho</th>
+                <th scope="col" *ngFor="let item of farAndCloseComponents">
+                  <input type="text" class="table-input" />
+                </th>
+              </tr>
+              <tr>
+                <th scope="col">Izquierdo</th>
+                <th scope="col" *ngFor="let item of farAndCloseComponents">
+                  <input type="text" class="table-input" />
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-
-      <div class="far-close-table-container-desk" *ngFor="let nameTable of farAndCloseTablesArr" id="desktop-table">
-        <span>{{nameTable}}</span>
-        <table
-        class="table table-striped"
-        >
-          <thead>
-            <tr>
-              <th scope="col">Ojo</th>
-              <th scope="col" *ngFor="let item of farAndCloseComponents">{{item}}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="col">Derecho</th>
-              <th scope="col" *ngFor="let item of farAndCloseComponents">
-                <input type="text">
-              </th>
-            </tr>
-            <tr>
-              <th scope="col">Izquierdo</th>
-              <th scope="col" *ngFor="let item of farAndCloseComponents">
-                <input type="text">
-              </th>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
-    </div>
-
-
-
-
-
     </section>
 
     <section
-    aria-labelledby="type-control-fields-section"
+      aria-labelledby="type-control-fields-section"
       [ngClass]="nextPage === 7 ? 'group-8-container' : 'hide-container'"
     >
-
-    <div class="type-control-container">
-      <mat-form-field class="type-control-field">
-        <mat-label>PROXIMO CONTROL</mat-label>
-        <input matInput #message maxlength="256" />
-      </mat-form-field >
-      <mat-form-field class="type-control-field">
-        <mat-label>VIGENCIA</mat-label>
-        <input matInput #message maxlength="256" />
-      </mat-form-field>
-      <mat-form-field class="type-control-field distanc-pupilar-class">
-        <mat-label>DISTANCIA PUPILAR</mat-label>
-        <input matInput #message maxlength="256" />
-      </mat-form-field>
-      <mat-form-field class="type-control-field type-glass-class">
-        <mat-label>TIPO DE LENTE</mat-label>
-        <input matInput #message maxlength="256" />
-      </mat-form-field>
-      <mat-form-field class="type-control-field type-filter-class">
-        <mat-label>CLASE DE FILTRO</mat-label>
-        <input matInput #message maxlength="256" />
-      </mat-form-field>
-      <mat-form-field class="type-control-field observations-class">
-        <mat-label>OBSERVACIONES</mat-label>
-        <textarea matInput></textarea>
-      </mat-form-field>
-    </div>
-
-
+      <div class="type-control-container">
+        <mat-form-field class="type-control-field">
+          <mat-label>PROXIMO CONTROL</mat-label>
+          <input matInput #message maxlength="256" />
+        </mat-form-field>
+        <mat-form-field class="type-control-field">
+          <mat-label>VIGENCIA</mat-label>
+          <input matInput #message maxlength="256" />
+        </mat-form-field>
+        <mat-form-field class="type-control-field distanc-pupilar-class">
+          <mat-label>DISTANCIA PUPILAR</mat-label>
+          <input matInput #message maxlength="256" />
+        </mat-form-field>
+        <mat-form-field class="type-control-field type-glass-class">
+          <mat-label>TIPO DE LENTE</mat-label>
+          <input matInput #message maxlength="256" />
+        </mat-form-field>
+        <mat-form-field class="type-control-field type-filter-class">
+          <mat-label>CLASE DE FILTRO</mat-label>
+          <input matInput #message maxlength="256" />
+        </mat-form-field>
+        <mat-form-field class="type-control-field observations-class">
+          <mat-label>OBSERVACIONES</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
+      </div>
     </section>
 
     <section aria-labelledby="buttons-section">
